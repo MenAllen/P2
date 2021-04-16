@@ -1,0 +1,295 @@
+/* CSS V1 */
+
+/*  #############################  STYLES GENERAUX ###########################################  */
+
+/* Police Raleway*/
+@font-face {
+	font-family: "Raleway";
+	src: url('static/Raleway-Black.ttf'),
+        url('static/Raleway-BlackItalic.ttf') url('Raleway-VariableFont_wght.ttf') url('Raleway-Italic-VariableFont_wght.ttf')
+}
+
+/*Initialisation de font faimly & Reset margin & padding*/
+* {
+    font-family: 'Raleway', Arial, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+	max-width: 1440px;
+	width: auto;
+	margin: auto;
+	color: #000000;
+}
+
+.bleu {
+	color: #0065FC;
+}
+
+header, footer, section	{
+	margin: 40px 50px 40px 50px;
+}
+
+h1, h2, h3, #filtres, .gras {
+	font-weight: bold;
+}
+
+h1 {
+	font-size: 1.4em;
+}
+
+h3, p {
+	font-size: 1em;
+}
+
+.gris {
+	color: #F2F2F2;
+}
+
+ul {
+	list-style-type: none;
+}
+
+a, a:visited {
+	text-decoration: none;
+	color: #000000;
+}
+
+
+/*  #############################  HEADER & FOOTER  #############################  */
+
+header, footer {
+	display: flex;
+	justify-content: space-between;
+}
+
+header {
+	align-items: center;
+	margin-top: 20px;
+}
+
+footer {
+	background-color: #F2F2F2;
+	margin-top: 80px;
+}
+
+#logo {
+	width: 100px;
+	height: auto;
+}
+
+nav {
+	display: flex;
+}
+
+nav ul {
+	display: flex;
+}
+
+nav li a {
+	padding: 0 25px 0 25px;
+}
+
+nav li:hover a {
+	color: #0065FC;
+	font-weight: bold;
+	border-top: solid 2px #0065FC;
+	padding-top: 30px;
+}
+
+footer div {
+	width: 33%;
+}
+
+footer div h2 {
+	font-size: 1.2em;
+	margin-left: 40px;
+	margin-top: 30px;
+}
+
+footer div ul {
+	font-size: 1em;
+	margin-left: 40px;
+	margin-top: 20px;
+}
+
+footer li {
+	margin-bottom: 10px;
+}
+
+#footerlist {
+    display: flex;
+    flex-direction: column;
+}
+
+/*  #############################  SECTION RECHERCHE & FILTRES ###############################  */
+
+#recherche h1 {
+	margin-bottom: 10px;
+}
+
+#lieuhebergement {
+	margin-bottom: 25px;
+}
+
+input {
+	font-size: 1em;
+	border: unset;
+}
+
+.localisation {
+	font-weight: bold;
+	height: 50px;
+}
+
+input::placeholder {
+	color: black;
+	padding-left: 15px;
+}
+
+.Rechercher {
+	border: unset;
+	border-bottom-right-radius : 15px; 
+	border-top-right-radius: 15px; 
+	background-color: #0065FC;
+	width: 135px;
+	height: 50px;
+	font-weight: bold;
+	color: white;
+	margin-left: 8px;
+}
+
+#filtres, #filtres ul {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: baseline;
+}
+
+#filtres h2	{
+	font-size: 1.1em;
+	margin-left: 12px;
+    margin-right: 30px;
+	margin-top: 30px;
+}
+
+/* propriétés icones de liste */
+#filtres i {
+	width: 30px;
+	height: 30px;
+	text-align: center;
+	color: #0065FC;
+	background-color: #DEEBFF;
+	border-radius: 50%;	
+	padding: 10px;
+	margin-right: 10px;
+	margin-left: -3px;
+	line-height: 30px;
+}
+
+#filtres li	{
+	margin-right: 25px;
+	border: 2px solid #F2F2F2;
+	border-radius: 30px;
+	padding-right: 20px;
+	font-size: 1.1em;
+	margin-bottom: 10px;
+}
+	
+#filtres li:hover {
+	color: #0065FC;
+}
+
+#filtres li:hover i {
+	background-color: #0065FC;
+	color: #DEEBFF;
+}
+
+i.fa-info {
+	width: 25px;
+	height: 25px;
+	font-size: 0.8em;
+	text-align: center;
+	border: 2px solid #F2F2F2;
+	border-radius: 50%;
+	color: #0065FC;
+	line-height: 20px;
+}
+
+/*  #############################  SECTION HEBERGEMENTS & POPULARITES ########################  */
+
+.container {
+	display: flex;
+	justify-content: space-between;
+	align-content: space-between;
+}
+
+#hebergements {
+	width: 70%;
+	background-color: #F2F2F2;
+	padding-top: 40px;
+	border-radius: 15px;
+}
+
+#populaires {
+	width: 30%;
+	background-color: #F2F2F2;
+	padding-top: 40px;
+	border-radius: 15px;
+}
+
+#listehotels, #listehotelspopulaires {
+	display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: space-between;
+    margin-bottom: 60px;
+}
+
+#listehotels figure {
+	width: 238px;
+	background-color: white;
+	border-radius: 15px;
+	padding: 5px 5px 10px 5px;
+	margin-top: 30px;
+	margin-left: 15px;
+	margin-right: 15px;
+	border: 2px solid white;
+}
+
+#listehotels img {
+	width: 235px;
+	height: 115px;
+	border-top-left-radius: 15px;
+	border-top-right-radius: 15px;
+}
+
+#listehotels figcaption {
+	margin: 15px 40px 0 15px;
+}
+
+#listehotelspopulaires figure {
+	display: flex;
+	width: 340px;
+	height: 135px;
+	background-color: white;
+	border-radius: 15px;
+	padding: 5px 5px 10px 5px;
+	margin-top: 30px;
+	margin-left: 15px;
+	margin-right: 15px;
+	border: 3px solid white;
+}
+
+#listehotelspopulaires img {
+	border-bottom-left-radius: 20px;
+	border-top-left-radius: 20px;
+	width: 127px;
+    height: 135px;
+    margin: 5px;
+}
+
+#listehotelspopulaires figcaption {
+	margin: 15px 40px 0 15px;
+}
