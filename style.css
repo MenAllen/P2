@@ -1,121 +1,430 @@
-/* CSS V1 */
-
-/*  #############################  STYLES GENERAUX ###########################################  */
-
-/* Police Raleway*/
+/* style.css V3 */
+/* ########################### Définition des polices personnalisées ########################### */
 @font-face {
-	font-family: "Raleway";
-	src: url('static/Raleway-Black.ttf'),
-        url('static/Raleway-BlackItalic.ttf') url('Raleway-VariableFont_wght.ttf') url('Raleway-Italic-VariableFont_wght.ttf')
+    font-family: 'Raleway';
+    src: url('Raleway-VariableFont_wght.ttf');
 }
 
-/*Initialisation de font faimly & Reset margin & padding*/
+/* ########################### Paramètres generaux de la page ################################## */
+
 * {
-    font-family: 'Raleway', Arial, Verdana, sans-serif;
     margin: 0;
     padding: 0;
 }
 
 body {
-	max-width: 1440px;
-	width: auto;
-	margin: auto;
-	color: #000000;
+    font-family: 'Raleway', Arial, sans-serif;
 }
 
-.bleu {
-	color: #0065FC;
+#bloc_page {
+    max-width: 100vw;
+    width: auto;
+    margin: auto;
+    color: #000000;
 }
 
-header, footer, section	{
-	margin: 40px 50px 40px 50px;
+.blue {
+    color: #0065fc;
 }
 
-h1, h2, h3, #filtres, .gras {
-	font-weight: bold;
+.grey {
+    color: #F2F2F2;
 }
 
-h1 {
-	font-size: 1.4em;
+.bold {
+    font-weight: bold;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+  color: #000000;
 }
 
 h3, p {
-	font-size: 1em;
+    font-size: 1em;
 }
 
-.gris {
-	color: #F2F2F2;
-}
-
-ul {
-	list-style-type: none;
-}
-
-a, a:visited {
-	text-decoration: none;
-	color: #000000;
-}
-
-
-/*  #############################  HEADER & FOOTER  #############################  */
-
-header, footer {
-	display: flex;
-	justify-content: space-between;
-}
+/* ########################### Header avec Navigation ############################################# */
 
 header {
-	align-items: center;
-	margin-top: 20px;
-}
-
-footer {
-	background-color: #F2F2F2;
-	margin-top: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2em 3em;
+    flex-wrap: wrap;
 }
 
 #logo {
-	width: 100px;
-	height: auto;
+    width: 100px;
+    height: auto;
+}
+
+#logo img {
+    width: auto;
+    height: auto;
 }
 
 nav {
-	display: flex;
+    display: flex;
 }
 
 nav ul {
-	display: flex;
+    display: flex;
+    list-style-type: none;
 }
+
+nav li {
+    margin-right: 2.5rem;
+}
+
+.blue {
+    color: #0065fc;
+ }
 
 nav li a {
-	padding: 0 25px 0 25px;
+    padding: 0 1.5rem;
+}
+  
+nav li:hover a {
+    color: #0065fc;
+    font-weight: bold;
+    border-top: solid 2px #0065fc;
+    padding-top: 2rem;
 }
 
-nav li:hover a {
-	color: #0065FC;
-	font-weight: bold;
-	border-top: solid 2px #0065FC;
-	padding-top: 30px;
+/* ########################### Section Recherche avec Filtres #################################### */
+
+#section_recherche {
+    display: flex;
+    flex-direction: column;
+    margin: 2rem 3rem;
+}
+
+#section_recherche h1 {
+    margin-bottom: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+#lieuhebergement {
+   margin-top: 0;
+   margin-bottom: 1rem;
+}
+
+input {
+    font-size: 1em;
+    border: unset;
+}
+
+input::placeholder {
+    color: black;
+    padding-left: 1rem;
+}
+
+button {
+    display: none;
+}
+
+.localisation {
+    font-weight: bold;
+    height: 3rem;
+}
+  
+.rechercher {
+    border: unset;
+    border-bottom-right-radius: 15px;
+    border-top-right-radius: 15px;
+    background-color: #0065fc;
+    width: 9rem;
+    height: 3rem;
+    font-weight: bold;
+    color: white;
+    margin-left: 8px;
+}
+
+#filtres {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  margin-top: 1rem;
+}
+
+#filtres ul {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  margin-top: 1rem;
+  list-style-type: none;
+}
+
+#filtres h2 {
+    font-size: 1.1em;
+    margin-left: 0;
+    margin-right: 2rem;
+    margin-top: 2rem;
+  }
+
+#filtres i {
+    width: 2rem;
+    height: 2rem;
+    text-align: center;
+    color: #0065fc;
+    background-color: #deebff;
+    border-radius: 50%;
+    padding: 10px;
+    margin-right: 10px;
+    margin-left: -3px;
+    line-height: 30px;
+}
+
+#filtres li {
+    margin-right: 25px;
+    border: 2px solid #f2f2f2;
+    border-radius: 30px;
+    padding-right: 20px;
+    font-size: 1.1em;
+    margin-bottom: 10px;
+}
+
+#filtres li:hover {
+    color: #0065fc;
+}
+  
+#filtres li:hover i {
+    background-color: #0065fc;
+    color: #deebff;
+}
+
+i.fa-info {
+    width: 1.5rem;
+    height: 1.5rem;
+    font-size: 0.8rem;
+    text-align: center;
+    border: 2px solid #f2f2f2;
+    border-radius: 50%;
+    color: #0065fc;
+    line-height: 1.2;
+}
+
+/* ########################### Section Hébergements & Popularites ################################## */
+
+#section_hebergements {
+    display: flex;
+    justify-content: space-between;
+    align-content: space-between;
+    margin: 2.5rem;
+}
+
+#hebergements {
+    width: 65vw;
+    background-color: #f2f2f2;
+    padding: 2rem 0;
+    border-radius: 15px;
+}
+
+#hebergements h1 {
+	margin-left: 2.8rem;
+}
+
+#afficherplus {
+	margin-left: 1rem;
+}
+
+#listehotels {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: space-between;
+    margin-bottom: 3.5rem;
+}
+
+#listehotels figure {
+    width: 14.8rem;
+    height: 11.5rem;
+    background-color: white;
+    border-radius: 15px;
+    padding: 0.3rem;
+    margin-top: 2rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    border: 1px solid white;
+}
+  
+#listehotels img {
+    width: 14.8rem;
+    height: 7.2rem;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+  
+#listehotels figcaption {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 4rem;
+}
+
+#populaires {
+    width: 26vw;
+    background-color: #f2f2f2;
+    padding: 2rem 0;
+    border-radius: 15px;
+}
+
+#titrepopulaires{
+	display: flex;
+	justify-content: space-around;
+	/*margin-left: -25px;*/
+}
+
+#populaires h1 {
+	margin-left: 0.2rem;
+}
+
+#listehotelspopulaires {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#listehotelspopulaires figure {
+    display: flex;
+    flex-direction: row;
+   /* width: 20rem; */
+    height: 8.4rem;
+    background-color: white;
+    border-radius: 15px;
+    padding: 0.3rem;
+    margin-top: 2rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    border: 1px solid white;
+}
+  
+#listehotelspopulaires img {
+    border-bottom-left-radius: 15px;
+    border-top-left-radius: 15px;
+    width: 8rem;
+    height: 16.8;
+    /*margin: 0;*/
+}
+
+#listehotelspopulaires figcaption {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 0.3rem 1rem 0 0.3rem;
+    /*height: 4rem;*/
+}
+/*
+#listehotelspopulaires figcaption {
+    margin: 0.3rem 1rem 0 0.3rem;
+}
+
+#listehotelspopulaires figcaption p {
+    margin-bottom: 3rem;
+}*/
+
+/* ########################### Section Activites ################################################### */
+
+#section_activites {
+	display: flex;
+    flex-direction: column;
+    align-content: space-between;
+    margin: 2.5rem;
+    padding: 2rem 0;
+    width: 93.5vw;
+    background-color: #f2f2f2;
+    border-radius: 15px;
+}
+
+#section_activites h1 {
+    margin-left: 2.8rem;
+    padding-bottom: 1rem;
+}
+
+#listeactivites {
+    display:flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+#listeactivites figure .unephoto {
+    display: flex;
+    flex-direction: column;
+    /*width: 25vw;*/
+    /*height: 440px;*/
+    background-color: red;
+    border-radius: 15px;
+    /*padding: 5px 5px 10px 5px;*/
+    padding: 45px;
+    margin-top: 2rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    border: 2px solid black;
+}
+
+#listeactivites figure .deuxphotos {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /*width: 310px;*/
+    /*height: 220px;*/
+    background-color: red;
+    border-radius: 15px;
+    /*padding: 5px 5px 10px 5px;*/
+    padding: 5px;
+    /*margin-top: 30px;
+    margin-left: 15px;
+    margin-right: 15px;*/
+    border: 2px solid white;
+}
+
+#listeactivites img {
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+    /*width: 280px;*/
+}
+  
+#listeactivites .unephoto figcaption {
+    margin: 5px 15px 5px 5px;
+}
+
+#listeactivites .deuxphotos figcaption {
+    margin: 5px 15px 80px 5px;
+}
+
+/* ########################### Footer ############################################################## */
+
+footer {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 2.5rem;
+    background-color: #f2f2f2;
+    width: 94vw;
+}
+  
+footer li {
+    margin-bottom: 10px;
 }
 
 footer div {
-	width: 33%;
+    width: 33%;
 }
-
+  
 footer div h2 {
-	font-size: 1.2em;
-	margin-left: 40px;
-	margin-top: 30px;
+    font-size: 1.2em;
+    margin-left: 2.5rem;
+    margin-top: 2rem;
 }
-
+  
 footer div ul {
-	font-size: 1em;
-	margin-left: 40px;
-	margin-top: 20px;
-}
-
-footer li {
-	margin-bottom: 10px;
+    font-size: 1em;
+    margin-left: 2.5rem;
+    margin-top: 1.2rem;
+    list-style-type: none;
 }
 
 #footerlist {
@@ -123,173 +432,90 @@ footer li {
     flex-direction: column;
 }
 
-/*  #############################  SECTION RECHERCHE & FILTRES ###############################  */
+/* ######################################### Version Mobile ######################################## */
+@media all and (max-width: 768px) {
 
-#recherche h1 {
-	margin-bottom: 10px;
+    header {
+        align-items: flex-start;
+    }
+
+    nav {
+        flex-direction: column-reverse;
+        width: 100%;
+        align-items: flex-end;
+    }
+
+    nav ul {
+        justify-content: space-around;
+        width: 100%;
+        margin: 0;
+    }
+
+    nav li {
+        border-bottom: 2px solid #F2F2F2;
+        padding-bottom: 20px;
+        width: 100%;
+        text-align: center;
+        margin: 20px -20px 0 -20px;
+    }
+
+    nav li:hover {
+        border-bottom: 2px solid #0065FC;
+    }
+
+    nav li:hover a {
+        color: #0065FC;
+        font-weight: bold;
+        border-top: unset;
+        padding-bottom: 20px;
+        width: 100%;
+    }
 }
 
-#lieuhebergement {
-	margin-bottom: 25px;
-}
+/* ######################################### Version Tablettes ######################################## */
+@media all /*and (min-width: 768px)*/ and (max-width: 1024px) {
 
-input {
-	font-size: 1em;
-	border: unset;
-}
-
-.localisation {
-	font-weight: bold;
-	height: 50px;
-}
-
-input::placeholder {
-	color: black;
-	padding-left: 15px;
-}
-
-.Rechercher {
-	border: unset;
-	border-bottom-right-radius : 15px; 
-	border-top-right-radius: 15px; 
-	background-color: #0065FC;
-	width: 135px;
-	height: 50px;
-	font-weight: bold;
-	color: white;
-	margin-left: 8px;
-}
-
-#filtres, #filtres ul {
-	display: flex;
-	flex-wrap: wrap;
-	align-items: baseline;
-}
-
-#filtres h2	{
-	font-size: 1.1em;
-	margin-left: 12px;
-    margin-right: 30px;
-	margin-top: 30px;
-}
-
-/* propriétés icones de liste */
-#filtres i {
-	width: 30px;
-	height: 30px;
-	text-align: center;
-	color: #0065FC;
-	background-color: #DEEBFF;
-	border-radius: 50%;	
-	padding: 10px;
-	margin-right: 10px;
-	margin-left: -3px;
-	line-height: 30px;
-}
-
-#filtres li	{
-	margin-right: 25px;
-	border: 2px solid #F2F2F2;
-	border-radius: 30px;
-	padding-right: 20px;
-	font-size: 1.1em;
-	margin-bottom: 10px;
-}
-	
-#filtres li:hover {
-	color: #0065FC;
-}
-
-#filtres li:hover i {
-	background-color: #0065FC;
-	color: #DEEBFF;
-}
-
-i.fa-info {
-	width: 25px;
-	height: 25px;
-	font-size: 0.8em;
-	text-align: center;
-	border: 2px solid #F2F2F2;
-	border-radius: 50%;
-	color: #0065FC;
-	line-height: 20px;
-}
-
-/*  #############################  SECTION HEBERGEMENTS & POPULARITES ########################  */
-
-.container {
-	display: flex;
-	justify-content: space-between;
-	align-content: space-between;
-}
-
-#hebergements {
-	width: 70%;
-	background-color: #F2F2F2;
-	padding-top: 40px;
-	border-radius: 15px;
-}
-
-#populaires {
-	width: 30%;
-	background-color: #F2F2F2;
-	padding-top: 40px;
-	border-radius: 15px;
-}
-
-#listehotels, #listehotelspopulaires {
-	display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-content: space-between;
-    margin-bottom: 60px;
-}
-
-#listehotels figure {
-	width: 238px;
-	background-color: white;
-	border-radius: 15px;
-	padding: 5px 5px 10px 5px;
-	margin-top: 30px;
-	margin-left: 15px;
-	margin-right: 15px;
-	border: 2px solid white;
-}
-
-#listehotels img {
-	width: 235px;
-	height: 115px;
-	border-top-left-radius: 15px;
-	border-top-right-radius: 15px;
-}
-
-#listehotels figcaption {
-	margin: 15px 40px 0 15px;
-}
-
-#listehotelspopulaires figure {
-	display: flex;
-	width: 340px;
-	height: 135px;
-	background-color: white;
-	border-radius: 15px;
-	padding: 5px 5px 10px 5px;
-	margin-top: 30px;
-	margin-left: 15px;
-	margin-right: 15px;
-	border: 3px solid white;
-}
-
-#listehotelspopulaires img {
-	border-bottom-left-radius: 20px;
-	border-top-left-radius: 20px;
-	width: 127px;
-    height: 135px;
-    margin: 5px;
-}
-
-#listehotelspopulaires figcaption {
-	margin: 15px 40px 0 15px;
+        h1{
+            color: red;
+        }
+    
+    /* centrage section recherche */
+    
+    #filtres {
+        margin-right: auto;
+        margin-left: auto;
+    }
+    
+    #filtres ul {
+        justify-content: space-between;
+    }
+        
+    /* repositionnement partie hébergements & populaires */
+        
+    #section_hebergements {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+    
+    #populaires {
+        margin-bottom: 2.5rem;
+        width: auto;
+        margin-right: auto;
+        margin-left: auto;
+    }
+    
+    #listehotelspopulaires {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    #listehotelspopulaires figure {
+        width: 323px;
+    }
+    
+    #hebergements {
+        flex-wrap: wrap;
+        width: 100%;
+    }
 }
