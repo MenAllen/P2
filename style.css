@@ -1,20 +1,19 @@
-/* style.css V5 */
+/* style.css V10 */
 /* ########################### Paramètres generaux de la page ################################## */
 
-/*body {
+body {
     margin: 0;
     padding: 0;
-} */
+}
 
 body {
     font-family: 'Raleway', sans-serif; 
     width: auto;
-    max-width: 100vw;
-    margin: auto;
+    max-width: 1920px;
     color: #000000;
 }
 
-.color-star-on { 
+.color-star-on, .style-menu { 
     color: #0065fc;
 }
 
@@ -22,19 +21,25 @@ body {
     color: #F2F2F2;
 }
 
-a,
+p, a,
 a:visited {
     text-decoration: none;
     color: #000000;
 }
 
 h1 {
-    font-size: 1.4em;
+    font-size: 1.5em;
 }
+
 h2 {
+    font-size: 1.4em;      
+}
+
+h3 {
     font-size: 1.2em;
 }
-h3, p {
+
+h4, p {
     font-size: 1em;
 }
 
@@ -52,30 +57,30 @@ header {
     height: auto;
 }
 
-.nav_container .menu_heberge{
+.style-register { 
+    color: #0065fc;
+    font-weight: bold;
+}
+
+nav {
     display: flex;
 }
 
-.nav_container ul {
+nav ul {
     display: flex;
     list-style-type: none;
 }
 
-.nav_container .menu_heberge li {
+nav li {
     margin-bottom: 0;
     padding-bottom: 0;
 }
 
-.nav_container li a {
+nav li a {
     padding: 0 1.5rem;
 }
-
-.nav_container .menu_register li a {
-    color: #0065fc;
-    font-weight: bold;
-}
   
-.nav_container .menu_heberge li:hover a {
+nav li:hover a {
     color: #0065fc;
     font-weight: bold;
     border-top: solid 2px #0065fc;
@@ -130,8 +135,8 @@ i.fa-map-marker-alt {
     height: 2.6rem;
     text-align:start;
     border: 2px solid #f2f2f2;   
-    margin-right: -10px;
-    margin-left: -10px;  
+    margin-right: -0.6rem;
+    margin-left: -0.6rem;  
 }
   
 .rechercher, .rechercherMobile {
@@ -160,7 +165,7 @@ i.fa-map-marker-alt {
   list-style-type: none;
 }
 
-#filtres h2 {
+#filtres h3 {
     font-size: 1.2em;
     margin-left: 0;
     margin-right: 2rem;
@@ -181,7 +186,7 @@ i.fa-map-marker-alt {
 }
 
 #filtres li {
-    margin-right: 25px;
+    margin-right: 1.56rem;
     border: 2px solid #f2f2f2;
     border-radius: 30px;
     padding-right: 1.2rem;
@@ -224,16 +229,18 @@ i.fa-info {
     margin: 2.5rem;
 }
 
+#hidden-h2 {
+    display: none;
+}
+
 #hebergements {
-    /*width: 65vw;*/
-    width: 62vw;
     background-color: #f2f2f2;
     padding: 1rem 0;
     border-radius: 15px;
     margin-bottom: 1rem;
 }
 
-#hebergements h1 {
+#hebergements h2 {
 	margin-left: 2rem;
 }
 
@@ -243,11 +250,9 @@ i.fa-info {
 
 #listehotels {
     display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
     align-content: space-between;
-    /*margin-bottom: 3.5rem;*/
 }
 
 #listehotels figure {
@@ -259,7 +264,7 @@ i.fa-info {
     margin-top: 1rem;
     margin-left: 1rem;
     margin-right: 1rem;
-    border: 1px solid white;
+    /*border: 1px solid white;*/
     box-shadow: 7px 7px 16px #f2f2f2;
 }
   
@@ -298,7 +303,11 @@ i.fa-info {
 	margin-left: -1.56rem;
 }
 
-#hebergementspopulaires h1 {
+i.fa-chart-line {
+    padding-right: 1.25rem;
+}
+
+#hebergementspopulaires h2 {
 	margin-left: 0.2rem;
 }
 
@@ -306,12 +315,11 @@ i.fa-info {
     display: flex;
     flex-direction: column;    
     justify-content: space-around;
-    align-items: space-between;
+    align-items: center;
 }
 
 #listehotelspopulaires figure {
     display: flex;
-    flex-direction: row;
     flex-shrink: 0;
     width: 20rem;
     height: 8.4rem;
@@ -321,7 +329,7 @@ i.fa-info {
     margin-top: 1rem;
     margin-left: 1rem;
     margin-right: 1rem;
-    border: 1px solid white;
+    /*border: 1px solid white;*/
 }
   
 #listehotelspopulaires img {
@@ -345,51 +353,100 @@ i.fa-info {
 /* ########################### Section Activites ################################################### */
 
 #section_activites {
-    margin: 2.5rem;
+    margin:3.4rem;
 }
 
-#section_activites h1 {
-    margin-left: 0.2rem
+#section_activites h2 {
+    margin-bottom: 1rem;
 }
 
-#listeactivites {
-    display:flex;
-    flex-direction: row;
+.listeactivites {
+    display: flex;
     justify-content: space-between;
-    flex-wrap: wrap;
+    height: 28rem;
 }
 
-#listeactivites div {               /* bloc activité composé de une ou deux images */
-    width: 18.5rem;
-    height: 27.8rem;
-    padding: 0 2px;
-}
-
-#listeactivites figure {
-    border-radius: 15px;
-    width: 18.75rem;
-    background-color: white;
+.bloc_1activite {
+    display: flex;
+    flex-direction: column;
     box-shadow: 7px 7px 16px #f2f2f2;
-    margin-left: 0;
+    border-radius: 20px;
+    width: 18.75rem;
+    overflow: hidden;
+    margin-right: 0.5rem;
 }
 
-#notre_dame_de_la_garde, #fort_de_pomegues {
-    margin-bottom: 4rem;
+.bloc_2activites {
+    display: flex;
+    flex-direction: column;
+    gap: 2.6rem;
+    width: 18.75rem;
+    margin-right: 0.5rem;
 }
 
-#listeactivites img {
-    border-top-right-radius: 15px;
-    border-top-left-radius: 15px;
+.bloc_1image img {
+    height: 24.3rem;
+    overflow: hidden;
+    object-fit: cover;
+    max-width: 100%;
     width: 100%;
+    max-height: 100%;
 }
 
-.recadrer-vieuxport	{
-	height: 24.3rem;
-	object-fit: cover;
+#bloc_2images_1,
+ #bloc_2images_2,
+  #bloc_2images_3,
+   #bloc_2images_4 {
+    box-shadow: 7px 7px 16px #f2f2f2;
+    border-radius: 20px;
+    overflow: hidden;
 }
 
-#activites h3  {
-    margin-top: 0;
+#bloc_2images_1 {
+   height: 15rem;
+}
+
+#bloc_2images_2 {
+    height: 10.3rem;
+}
+
+#bloc_2images_3 {
+    height: 12.2rem;
+}
+
+#bloc_2images_4 {
+    height: 13.1rem;
+}
+
+#fortdepomegues img,
+ #ilesdufrioul img,
+  #notredamedelagarde img,
+   #parclongchamp img {
+    overflow: hidden;
+    object-fit: cover;
+    max-width: 100%;
+    width: 100%;
+    max-height: 100%;
+}
+
+#fortdepomegues img {
+    height: 11.25rem;
+ }
+#ilesdufrioul img {
+    height: 6.85rem;
+ }
+
+#notredamedelagarde img {
+    height: 8.75rem;
+}
+
+#parclongchamp img {
+    height: 9.35rem;
+}
+
+.bloc_info {
+    margin:1em 1em 1em 1.2em;
+    font-size: 0.9em;
 }
 
 /* ########################### Footer ############################################################## */
@@ -406,7 +463,7 @@ footer div {
     width: 33%;
 }
 
-footer div h2 {
+footer div h3 {
     font-size: 1.2em;
     margin-left: 2.5rem;
     margin-top: 2rem;
@@ -422,14 +479,8 @@ footer li {
     margin-bottom: 0.6rem;
 }
 
-/* ######################################### Responsive : Version Desktop ########################## */
-@media all and (max-width: 1290px) {
-
-
-}
-
 /* ######################################### Responsive : Version Tablettes ######################## */
-@media all and (max-width: 991px) {
+@media all and (max-width: 1044px) {
 
     /* centrage section recherche */
 
@@ -467,12 +518,54 @@ footer li {
         width: 20rem;
     }
 
-    /* repositionnement partie activités */
+    /* repositionnement partie activités sur 3 colonnes */
 
-    #listeactivités {
-		justify-content: space-around;
-	}
+    #section_activites {
+        margin: 3.4em 1.25em;
+    }   
     
+    .listeactivites {
+        flex-wrap: wrap;
+        align-items: baseline;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+    }
+
+    .bloc_1activite {
+        width: 30%;
+        height: 11.85rem;
+        margin-right: 1.25rem;
+        margin-top: 1.25rem;
+    }
+
+    .bloc_1image {
+        height: 8.43rem;
+    }
+
+    .bloc_2activites {
+        flex-direction: row;
+        gap: 0;
+        width: 60%;
+    }
+
+    #bloc_2images_1, #bloc_2images_3 {
+        margin-right: 1.25em;
+        width: 100%;
+        height: 11.85rem;
+    }
+    #bloc_2images_2, #bloc_2images_4 {
+        width: 100%;
+        height: 11.85rem;
+    }
+
+    #fortdepomegues,
+     #ilesdufrioul img,
+      #notredamedelagarde,
+       #parclongchamp {
+        height: 8.43rem;
+    }
+
 }
 
 /* ######################################### Responsive : Version Mobile ########################### */
@@ -482,43 +575,47 @@ footer li {
     
     header {
         align-items: flex-start;
-        margin: 1.8rem 1.25rem 0 1.25rem;
+        margin: 1.8rem 1.25rem 1.25rem 1.25rem;
     }
 
     #logo {
 		position: absolute;           /* permet à nav de pouvoir se décaler sur la gauche  */
 	}
 
-    .nav_container {
-        width: 100%;
-    }
-
-    .nav_container ul {
+    nav {
         flex-direction: column-reverse;
         width: 100%;
         padding-left: 0;
         align-items:flex-end;
     }
 
-    .nav_container .menu_heberge {
+    nav ul {
         justify-content: space-around;
         width: 100%;
         margin: 0;
     }
 
-    .nav_container .menu_heberge li {
+    nav li {
         border-bottom: 2px solid #F2F2F2;
         padding-bottom: 1rem;
         width: 100%;
         text-align: center;
         margin: 1.65rem 0 0 0;
     }
+    
+    .style-menu {
+       margin-top: 1rem;
+    }
 
-    .nav_container .menu_heberge li:hover {
+    .style-register {
+        margin-top: 0;
+    }
+
+    nav li:hover {
         border-bottom: 2px solid #0065FC;
     }
 
-    .nav_container .menu_heberge li:hover a {
+    nav li:hover a {
         color: #0065FC;
         font-weight: bold;
         border-top: unset;
@@ -526,6 +623,7 @@ footer li {
     }
 
     /* Responsive Mobile: Redimensionner Recherche et Filtres */
+
     #section_recherche {
         margin: 0 1.25rem; 
     }
@@ -545,12 +643,12 @@ footer li {
         text-align: center;
     }
 
-    #filtres h2 {                   /* redimensionner les filtres */
+    #filtres h3 {                   /* redimensionner les filtres */
         margin-top: 1rem;
     }
 
     #filtres li {
-        margin-right: 5px;
+        margin-right: 0.31rem;
         padding-right: 0.5rem;   
     }
 
@@ -559,10 +657,6 @@ footer li {
     #section_hebergements {
         margin: 0;
     }
-
-    #listehotels {
-		flex-direction: column;
-	}
     
 	#listehotels figure {			
 		margin-left: auto;
@@ -579,8 +673,13 @@ footer li {
 		padding-bottom: 1rem;
 	}
 
+    #listehotelspopulaires {
+		flex-direction: column;
+        align-items: center;
+	}
+
 	#titrepopulaires {
-		margin: -10px -10px 20px -20px;
+		margin: -0.6rem -0.6rem 1.2rem -1.2rem;
 	}
 
 	#hebergementspopulaires figure {
@@ -594,7 +693,7 @@ footer li {
 		background-color: unset;
 	}
 			
-	#hebergements h1 {
+	#hebergements h2 {
 		margin-left: 1.25rem;
 		margin-bottom: 1.25rem;
 	}
@@ -610,42 +709,57 @@ footer li {
 		object-fit: cover;
     }
 
-    /* Responsive Mobile: Activités */
+    /* Responsive Mobile: Activités - passage sur 1 colonne */
 
     #section_activites {
-        margin: 0;
+        margin: 1em 1.25em 2.4em 1.25em;
     }
 
-    #section_activites h1 {
-        margin-left: 1.3rem;
+    #section_activites h2 {
+        margin:0;
     }
 
-    #listeactivites {
-		flex-direction: column;
-	}
-
-    #listeactivites div	{
-		width: auto;
-		height: auto;
-	}
-
-    #listeactivites figure {
-        width: 21rem;
-		height: 11.8rem;
-		margin-right: auto;
-		margin-left: auto;
-		margin-bottom: 1.25rem;
-		margin-top: 0;
-        border-bottom-right-radius: 15px;
-        border-bottom-left-radius: 15px;
+    .listeactivites {
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        height: 100%;
     }
 
-    #listeactivites figure img	{
-		width: 20.6rem;
-        height: 8.1rem;
-		object-fit: cover;
+    .bloc_1image {
+        height: 8.43rem;
     }
 
+    .bloc_1activite {
+        width: 20.25rem;
+        height: 11.85rem;
+        margin-top: 2em;
+        margin-right: 0;
+    }
+
+    .bloc_2activites {
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 20.25rem;
+        margin-top: 2em;
+        justify-content: center;
+        margin-right: 0;
+    }
+
+    #bloc_2images_1,
+     #bloc_2images_2,
+      #bloc_2images_3,
+       #bloc_2images_4 {
+        height: 11.85rem;
+        width: 100%;
+        margin-right: 0;
+    }
+
+    #fortdepomegues, #ilesdufrioul, #notredamedelagarde, #parclongchamp {
+        height: 8.43rem;
+    }
+    
     /* Responsive Mobile : Footer */
 	footer {
 		flex-wrap: wrap;

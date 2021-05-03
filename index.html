@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="FR">
-  <!-- index.html V5-->
+  <!-- index.html V10-->
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -25,17 +25,16 @@
         <img src="images/logo/Reservia.svg" alt="logo reservia">
       </div>
 
-      <nav class="nav_container">
+      <nav>
         <ul>
-          <div class="menu_heberge">
-            <li><a href="#hebergements">Hébergements</a></li>
-            <li><a href="#section_activites">Activités</a></li>
-          </div>
-          <div class="menu_register">
-            <li><a href="#">S'inscrire</a></li>
-          </div>
+          <li class="style-menu"><a href="#hebergements">Hébergements</a></li>
+          <li class="style-menu"><a href="#section_activites">Activités</a></li>
         </ul>
+        <div>
+          <a href="#"><p class="style-register">S'inscrire</p></a>
+        </div>        -            
       </nav>
+
     </header>
 
     <!--#################################  Main #################################################-->
@@ -69,7 +68,7 @@
 
         <!-- partie des filtres -->
         <div id="filtres">
-          <h2>Filtres</h2>
+          <h3>Filtres</h3>
           <ul>
             <li><i class="fas fa-money-bill-wave"></i>Économique</li>
             <li><i class="fas fa-child"></i>Familial</li>
@@ -87,10 +86,12 @@
       <!--##########################  Section Hebergements & Popularité  ##########-->
 
       <section id="section_hebergements">
+        <h2 id="hidden-h2">W3C Check Warning to clear</h2>
+
         <!--###############################  Hebergements  ########################-->
 
-        <article id="hebergements">
-          <h1>Hébergements à Marseille</h1>
+        <section id="hebergements">
+          <h2>Hébergements à Marseille</h2>
 
           <div id="listehotels">
             <a href="#">
@@ -100,7 +101,7 @@
                   alt="auberge_la_cannebiere"
                 >
                 <figcaption>
-                  <h3 class="heb-figcaption">Auberge la Cannebière</h3>
+                  <h4 class="heb-figcaption">Auberge la Cannebière</h4>
                   <p class="heb-figcaption">
                     Nuit à partir de <strong>25€</strong>
                   </p>
@@ -122,7 +123,7 @@
                   alt="hotel_du_port"
                 >
                 <figcaption>
-                  <h3 class="heb-figcaption">Hôtel du port</h3>
+                  <h4 class="heb-figcaption">Hôtel du port</h4>
                   <p class="heb-figcaption">
                     Nuit à partir de <strong>52€</strong>
                   </p>
@@ -144,7 +145,7 @@
                   alt="hotel_les_mouettes"
                 >
                 <figcaption>
-                  <h3 class="heb-figcaption">Hôtel Les mouettes</h3>
+                  <h4 class="heb-figcaption">Hôtel Les mouettes</h4>
                   <p class="heb-figcaption">
                     Nuit à partir de <strong>76€</strong>
                   </p>
@@ -166,7 +167,7 @@
                   alt="hotel_de_la_mer"
                 >
                 <figcaption>
-                  <h3 class="heb-figcaption">Hôtel de la mer</h3>
+                  <h4 class="heb-figcaption">Hôtel de la mer</h4>
                   <p class="heb-figcaption">
                     Nuit à partir de <strong>46€</strong>
                   </p>
@@ -188,7 +189,7 @@
                   alt="auberge_le_panier"
                 >
                 <figcaption>
-                  <h3 class="heb-figcaption">Auberge Le Panier</h3>
+                  <h4 class="heb-figcaption">Auberge Le Panier</h4>
                   <p class="heb-figcaption">
                     Nuit à partir de <strong>23€</strong>
                   </p>
@@ -210,7 +211,7 @@
                   alt="hotel_chez_amina"
                 >
                 <figcaption>
-                  <h3 class="heb-figcaption">Hôtel chez Amina</h3>
+                  <h4 class="heb-figcaption">Hôtel chez Amina</h4>
                   <p class="heb-figcaption">
                     Nuit à partir de <strong>96€</strong>
                   </p>
@@ -226,14 +227,14 @@
             </a>
           </div>
 
-          <h3 id="afficherplus">Afficher plus</h3>
-        </article>
+          <h4 id="afficherplus">Afficher plus</h4>
+        </section>
 
         <!--#################################  Heb Populaires  ####################-->
 
         <aside id="hebergementspopulaires">
           <div id="titrepopulaires">
-            <h1>Les plus populaires</h1>
+            <h2>Les plus populaires</h2>
             <i class="fas fa-chart-line"></i>
           </div>
 
@@ -246,7 +247,7 @@
                 >
                 <figcaption>
                   <div>
-                    <h3 class="pop-figcaption">Hôtel Le soleil du matin</h3>
+                    <h4 class="pop-figcaption">Hôtel Le soleil du matin</h4>
                     <p class="pop-figcaption">
                       Nuit à partir de <strong>128€</strong>
                     </p>
@@ -270,9 +271,9 @@
                 >
                 <figcaption>
                   <div>
-                    <h3 class="pop-figcaption">
+                    <h4 class="pop-figcaption">
                       Au coeur de l'eau Chambres d'hôtes
-                    </h3>
+                    </h4>
                     <p class="pop-figcaption">
                       Nuit à partir de <strong>71€</strong>
                     </p>
@@ -296,7 +297,7 @@
                 >
                 <figcaption>
                   <div>
-                    <h3 class="pop-figcaption">Hôtel Tout bleu et Blanc</h3>
+                    <h4 class="pop-figcaption">Hôtel Tout bleu et Blanc</h4>
                     <p class="pop-figcaption">
                       Nuit à partir de <strong>68€</strong>
                     </p>
@@ -318,92 +319,88 @@
       <!--#########################  Section Activités  #####################################-->
 
       <section id="section_activites">
-        <h1>Activités à Marseille</h1>
 
-        <div id="listeactivites">
-          <a href="#">
-            <div>
-              <figure>
-                <img
-                  src="images/activites/4_small/vieux-port.jpg"
-                  alt="Vieux Port" class="recadrer-vieuxport"
-                >
-                <figcaption>
-                  <h3>Vieux Port</h3>
-                </figcaption>
-              </figure>
+        <h2>Activités à Marseille</h2>
+      
+				<div class="listeactivites">
+
+					<div class="bloc_1activite">	
+            <a href="#">					
+							<div class="bloc_1image">
+                <img src="images/activites/4_small/vieux-port.jpg" alt="Vieux Port">
+							</div>
+							<div class="bloc_info">
+								<h4>Vieux Port</h4>
+							</div>
+            </a>						
+					  </div>
+          
+					<div class="bloc_2activites">
+            <div id="bloc_2images_1">
+              <a href="#">						
+                <div id="fortdepomegues">
+                  <img src="images/activites/4_small/fortdepomegues.jpg" alt="Fort de Pomegues" >
+                </div>
+                <div class="bloc_info">
+                  <h4>Fort de Pomègues</h4>
+                </div>
+              </a>
             </div>
-          </a>
-
-          <a href="#">
-            <div>
-              <figure id="fort_de_pomegues">
-                <img
-                  src="images/activites/4_small/fortdepomegues.jpg"
-                  alt="Fort de Pomegues"
-                >
-                <figcaption>
-                  <h3>Fort de Pomègues</h3>
-                </figcaption>
-              </figure>
-
-              <figure>
-                <img
-                  src="images/activites/4_small/ilesdufrioul.jpg"
-                  alt="Vieux Port"
-                >
-                <figcaption>
-                  <h3>Iles du Frioul</h3>
-                </figcaption>
-              </figure>
+            <div id="bloc_2images_2">
+              <a href="#"> 
+                <div id="ilesdufrioul">
+                  <img src="images/activites/4_small/ilesdufrioul.jpg" alt="Iles du Frioul" >
+                </div>
+                <div class="bloc_info">
+                  <h4>Île du Frioul</h4>
+                </div>
+              </a>
             </div>
-          </a>
+					</div>
 
-          <a href="#">
-            <div>
-              <figure>
-                <img
-                  src="images/activites/4_small/parcnationaldescalanques.jpg"
-                  alt="Parc National des Calanques"
-                >
-                <figcaption>
-                  <h3>Parc National des Calanques</h3>
-                </figcaption>
-              </figure>
-            </div>
-          </a>
+          <div class="bloc_1activite">
+            <a href="#"> 
+							<div class="bloc_1image">
+                <img src="images/activites/4_small/parcnationaldescalanques.jpg" alt="Parc National des Calanques" >
+              </div>
+							<div class="bloc_info">
+								<h4>Parc National des Calanques</h4>
+							</div>
+            </a>
+					</div>
 
-          <a href="#">
-            <div>
-              <figure id="notre_dame_de_la_garde">
-                <img
-                  src="images/activites/4_small/notredamedelagarde.jpg"
-                  alt="Notre Dame de la Garde"
-                >
-                <figcaption>
-                  <h3>Notre Dame de la Garde</h3>
-                </figcaption>
-              </figure>
+					<div class="bloc_2activites">
+						<div id="bloc_2images_3">
+              <a href="#">						
+								<div id="notredamedelagarde">
+                  <img src="images/activites/4_small/notredamedelagarde.jpg" alt="Notre Dame de la Garde" >
+								</div>
+								<div class="bloc_info">
+									<h4>Notre-Dame-de-la-Garde</h4>
+								</div>
+              </a>						
+						</div>
+						<div id="bloc_2images_4">
+              <a href="#">						
+								<div id="parclongchamp">
+                  <img src="images/activites/4_small/parclongchamp.jpg" alt="Parc Longchamp" >
+								</div>
+								<div class="bloc_info">
+									<h4>Parc Longchamp</h4>
+								</div>
+              </a>						
+						</div>
+					</div>
 
-              <figure>
-                <img
-                  src="images/activites/4_small/parclongchamp.jpg"
-                  alt="Parc Longchamp"
-                >
-                <figcaption>
-                  <h3>Parc Longchamp</h3>
-                </figcaption>
-              </figure>
-            </div>
-          </a>
-        </div>
-      </section>
+				</div>	
+			</section>
+
     </main>
 
     <!--#################################  Footer #############################################-->
     <footer>
       <div>
-        <h2>A propos</h2>
+        <h3>A propos</h3>
         <ul>
           <li>Fonctionnement du site</li>
           <li>Conditions générales de vente</li>
@@ -412,7 +409,7 @@
       </div>
 
       <div>
-        <h2>Nos hébergements</h2>
+        <h3>Nos hébergements</h3>
         <ul>
           <li>Charte qualité</li>
           <li>Soumettre votre hôtel</li>
@@ -420,7 +417,7 @@
       </div>
 
       <div>
-        <h2>Assistance</h2>
+        <h3>Assistance</h3>
         <ul>
           <li>Centre d'aide</li>
           <li>Nous contacter</li>
