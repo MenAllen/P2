@@ -182,7 +182,7 @@ button.search_button:hover {
   height: 2rem;
   text-align: center;
   color: #0065fc;
-  background-color: #cfddf0;
+  background-color: #deebff;
   border-radius: 50%;
   padding: 0.6rem;
   margin-right: 0.6rem;
@@ -207,7 +207,7 @@ button.search_button:hover {
 
 #search_filters li:hover i {
   background-color: #0065fc;
-  color: #cfddf0;
+  color: #deebff;
 }
 
 #search_result {
