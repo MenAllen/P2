@@ -25,7 +25,7 @@ h1,
 h2,
 h3,
 h4,
-strong {
+span {
   font-weight: bold;
 }
 
@@ -61,28 +61,27 @@ nav {
 nav ul {
   display: flex;
   list-style-type: none;
+  align-items: center;
+  justify-content: space-around;
 }
 
 nav li {
-  width: 160px;
+  width: 12rem;
 }
 
 .register_style {
   color: #0065fc;
   font-weight: bold;
-}
-
-.menu_style {
-  color: #0065fc;
+  text-align: center;
+  padding: 2rem 1rem 2rem 1rem;
 }
 
 nav li a {
-  padding-top: 2rem;
+  padding: 2rem;
 }
 
 nav li:hover a {
   color: #0065fc;
-  font-weight: bold;
   border-top: solid 2px #0065fc;
 }
 
@@ -149,6 +148,7 @@ input::placeholder {
   height: 3rem;
   font-weight: bold;
   color: white;
+  margin-left: -0.75rem;
 }
 
 input.search_input:hover,
@@ -234,6 +234,7 @@ i.fa-info {
 }
 
 #lodging_results {
+  align-content: center;
   background-color: #f2f2f2;
   padding: 2rem 0;
   border-radius: 15px;
@@ -307,6 +308,7 @@ i.fa-info {
 #popular_hotels_list {
   display: flex;
   flex-direction: column;
+  height: 100%;
   justify-content: space-around;
   align-items: center;
 }
@@ -339,16 +341,20 @@ i.fa-info {
 
 /* ########################### Section Activites ################################################### */
 #activities_section {
+  display: flex;
+  flex-direction: column;
   margin: 2rem 3rem;
 }
 
 #activities_section h2 {
+  margin-left: 0.6rem;
   margin-bottom: 1rem;
 }
 
 .activities_list {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .single_activity_container {
@@ -405,7 +411,7 @@ i.fa-info {
 }
 
 #parclongchamp {
-  height: 9rem;
+  height: 9.11rem;
 }
 
 #fortdepomegues img,
@@ -433,6 +439,8 @@ footer {
 }
 
 footer div {
+  display: flex;
+  flex-direction: column;
   width: 33vw;
 }
 
@@ -452,12 +460,13 @@ footer li {
   margin-bottom: 0.6rem;
 }
 
-/* ######################################### Responsive : de 1560px à 3875px ######################## */
-@media all and (min-width: 1560px) {
+/* ######################################### Responsive : de 1590px à 3875px ######################## */
+@media all and (min-width: 1590px) {
+
   #hotels_list {
     width: 70vw;
     column-gap: 8.5vw;
-    row-gap: 3vh;
+    row-gap: 1vh;
   }
 
   .hotel {
@@ -474,12 +483,12 @@ footer li {
   }
 
   #popular_hotels_list {
-    width: 26vw;
+    width: 24vw;
     row-gap: 2vh;
   }
 
   .popular_hotel {
-    width: 20vw;
+    width: 19vw;
     max-width: 38rem;
     height: auto;
   }
@@ -503,10 +512,10 @@ footer li {
 }
 
 /* ######################################### Responsive : Version Tablettes ######################## */
-@media all and (max-width: 1044px) {
+@media all and (max-width: 1030px) {
   #search_filters ul {
     justify-content: space-between;
-    margin-top: 1rem; /* V16 */
+    margin-top: 1rem;
     padding-left: 0;
   }
 
@@ -517,26 +526,36 @@ footer li {
     align-items: center;
   }
 
-  #lodging_results {
-    flex-wrap: wrap;
-    width: 100%;
+  #popular_title {
+    justify-content: space-between;
+    margin-left: 0.5rem;
+    margin-right: 1rem;
   }
 
   #popular_lodging {
-    width: auto;
-    margin-right: auto;
-    margin-left: auto;
+    width: 100%;
+    margin: 0 0 1rem 0;
+    min-width: 12rem;
   }
 
   #popular_hotels_list {
     flex-direction: row;
-    flex-wrap: wrap;
     justify-content: space-around;
+    gap: 1.5vw;
+    padding-left: 1vw;
+    padding-right: 1vw;
   }
 
   .popular_hotel {
-    width: 20rem;
+    width: auto;
+    max-width: 21rem;
+    min-width: 12rem;
     margin: 1rem 0 0 0;
+    padding: 0;
+  }
+
+  .popular_hotel_caption {
+    margin-right: 0;
   }
 
   /* repositionnement partie activités sur 3 colonnes */
@@ -549,8 +568,10 @@ footer li {
     flex-wrap: wrap;
     align-items: baseline;
     justify-content: center;
-    width: 100%;
-    height: 100%;
+  }
+
+  #activities_section h2 {
+    margin-left: 2.5rem;
   }
 
   .single_activity_container {
@@ -568,6 +589,7 @@ footer li {
     flex-direction: row;
     width: 60%;
     height: auto;
+    gap: 0;
   }
 
   #double_activity_1,
@@ -592,28 +614,25 @@ footer li {
 }
 
 /* ######################################### Responsive : Version Mobile ########################### */
-@media all and (max-width: 758px) {
+@media all and (max-width: 760px) {
   header {
     align-items: flex-start;
-    margin: 1.8rem 1.25rem 1.25rem 1.25rem;
+    margin: 1.8rem 0 1.25rem 0;
   }
 
   #company_logo {
     position: absolute;
-    padding-left: 20px;
+    padding-left: 1.25rem;
   }
 
   nav {
     flex-direction: column-reverse;
     width: 100%;
-    padding-left: 0;
     align-items: flex-end;
   }
 
   nav ul {
-    justify-content: space-around;
     width: 100%;
-    margin: 0;
   }
 
   nav li {
@@ -624,15 +643,8 @@ footer li {
     margin: 1.65rem 0 0 0;
   }
 
-  .menu_style {
-    margin-top: 1rem;
-  }
-
   .register_style {
-    width: auto;
-    margin: 0;
-    padding: 16px 0;
-    padding-right: 16px;
+    padding: 1rem 2rem 1rem 0;
   }
 
   nav li:hover {
@@ -640,8 +652,6 @@ footer li {
   }
 
   nav li:hover a {
-    color: #0065fc;
-    font-weight: bold;
     border-top: unset;
     padding-bottom: 1.25rem;
   }
@@ -683,13 +693,14 @@ footer li {
   }
 
   #lodging_results {
-    width: auto;
+    width: 100%;
     background-color: unset;
+    padding-top: 1rem;
   }
 
   #lodging_results h2 {
-    margin-left: 1.25rem;
-    margin-bottom: 1.25rem;
+    margin-left: 0.5rem;
+    margin-bottom: 0.5rem;
   }
 
   #hotels_list {
@@ -698,7 +709,7 @@ footer li {
   }
 
   .hotel {
-    width: auto;
+    width: 100%;
     max-width: 21rem;
     margin-right: 0;
     margin-left: 0;
@@ -711,93 +722,78 @@ footer li {
   }
 
   .hotel_picture img {
-    width: 100%;
     object-fit: cover;
     height: 7.2rem;
   }
 
   #popular_lodging {
-    width: 100%;
-    margin-left: auto;
-    margin-right: auto;
     padding-bottom: 1rem;
+    border-radius: 0;
   }
 
   #popular_hotels_list {
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-
-  #popular_hotel {
-    width: auto;
-    max-width: 21rem;
-    margin-right: 0;
-    margin-left: 0;
-  }
-
-  .popular_hotel_picture {
-    width: 45%;
-    height: auto;
   }
 
   /* Responsive Mobile: Activités - passage sur 1 colonne */
 
   #activities_section {
-    margin: 1em 1.25em 2.4em 1.25em;
+    justify-content: center;
+    margin: 1rem 0.5rem 2.4rem 0.5rem;
   }
 
   #activities_section h2 {
-    margin: 0;
+    padding: 0;
+    margin-left: 0.2rem;
+    margin-bottom: 0;
   }
 
   .activities_list {
     flex-wrap: wrap;
     flex-direction: column;
-    align-items: center;
-    width: 100%;
-    height: 100%;
+    align-content: center;
   }
 
   .single_activity_container {
-    width: 20.25rem;
-    height: 11.85rem;
-    margin-top: 2em;
+    width: 100%;
+    max-width: 21rem;
+    margin-top: 2rem;
     margin-right: 0;
-  }
-
-  .single_activity_picture {
-    height: 8.43rem;
   }
 
   .double_activity_container {
-    flex-direction: row;
-    flex-wrap: wrap;
-    width: 20.25rem;
-    margin-top: 2em;
+    flex-direction: column;
+    max-width: 21rem;
+    width: 100%;
+    margin-top: 2rem;
     justify-content: center;
     margin-right: 0;
+    gap: 2.5rem;
   }
 
   #double_activity_1,
   #double_activity_3 {
-    width: 100%;
     margin-right: 0;
   }
 
   /* Responsive Mobile : Footer */
   footer {
-    flex-wrap: wrap;
-    margin: 1.8rem 0 0 0;
+    margin: 0;
+    align-content: flex-start;
   }
 
   footer div {
     min-width: 16.75rem;
   }
+
+  footer div h3,
+  footer div ul {
+    margin-left: 2.5rem;
+  }
 }
 
 /* ######################################### Responsive : Version > Mobile ########################### */
-@media all and (min-width: 758px) {
+@media all and (min-width: 760px) {
   button {
     display: none; /* le bouton de recherche version mobile disparaît */
   }
